@@ -11,6 +11,7 @@
 */
 * {
   margin: 0;
+  padding: 0;
 }
 /*
   Typographic tweaks!
@@ -59,4 +60,12 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/*
+  9. Remove default list item styles
+*/
+ul,
+ol {
+  list-style: none;
 }
