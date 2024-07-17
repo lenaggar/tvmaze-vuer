@@ -75,9 +75,9 @@ And when the **Genre Screen** wants to read shows for a specific show `genre`; f
 
 I used [vue-router](https://router.vuejs.org/) for this app's routing. And as mentioned earlier this app has some routes:
 
-- `/` - Home page
-- `/genres/:genreId` - Genre page
-- `/shows/:showId` - Detailed view page
+- `/` - Home Screen
+- `/genres/:genreId` - Genre Screen
+- `/shows/:showId` - DetailedView Screen
 - `/404` - Not Found page (there's another wildcard route that redirects to this one for any route that is not defined here)
 
 ### Horizontal Scrolling Component
@@ -100,11 +100,16 @@ npm install
 npm run dev
 ```
 
-## TODO
+## TODOs
 
 If I had a couple more dedicated days for this task, what I would do to improve it:
 
-1. Add unit tests to some parts, especially:
+1. Add [vitest](https://vitest.dev/) package and use it to test to some parts, especially:
 
-   - State. I would like to assert that the state as a black box works as I expect it to work.
-   - Some pages like **Genre page** and **Detailed view page** rely on a reactive param values read from vue router, So I'd test that these are reacting properly to param changes.
+   - State. I would like to do integration tests for the pinia store to assert that as a black box it works as I expect it to work,
+   - Some page components like **Genre Screen** and **DetailedView Screen** rely on a reactive param values read from vue router, So I'd test that these are reacting properly to param changes,
+   - Utils,
+
+2. Consider using `Tailwind` for a more convenient way of styling.
+
+3. Add more details and information to the **DetailedView Screen**
